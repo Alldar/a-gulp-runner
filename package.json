@@ -1,0 +1,44 @@
+{
+	"name": "agulp",
+	"description": "agulp task runer",
+	"version": "1.0.0",
+	"maintainers": [
+		{
+			"name": "Alldar",
+			"email": "alldar@cmscafe.ru",
+			"web": "www.cmscafe.ru"
+		}
+	],
+	"licenses": [
+		{
+			"name": "GPL",
+			"url": "http://www.gnu.org/licenses/quick-guide-gplv3.en.html"
+		}
+	],
+	"dependencies": {
+		"browser-sync": "^2.26.3",
+		"gulp": "^4.0.0",
+		"gulp-autoprefixer": "^6.0.0",
+		"gulp-cache": "^1.0.2",
+		"gulp-changed": "^3.2.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-file-include": "^2.0.1",
+		"gulp-header": "^2.0.7",
+		"gulp-imagemin": "^5.0.3",
+		"gulp-notify": "^3.2.0",
+		"gulp-postcss": "^8.0.0",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-size": "^3.0.0",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-svg-sprite": "^1.5.0",
+		"gulp-uglify": "^3.0.1",
+		"postcss-flexbugs-fixes": "^4.1.0",
+		"postcss-font-family-system-ui": "^4.1.0",
+		"postcss-gradientfixer": "0.0.6",
+		"postcss-input-style": "^1.0.0",
+		"require-dir": "^1.2.0",
+		"undertaker-forward-reference": "^1.0.2",
+		"vinyl-buffer": "^1.0.1"
+	}
+}

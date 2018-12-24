@@ -1,0 +1,53 @@
+// ClearFix
+@mixin clearfix() {
+	&:after {
+		content : '';
+		display : table;
+		clear   : both;
+	}
+}
+
+// Placeholder (incule IE9 - need external js lib https://github.com/mathiasbynens/jquery-placeholder)
+
+@mixin placeholder($ie9:yes) {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+
+	@if $ie9 == "yes" {
+		&.placeholder {
+			@content;
+		}
+	}
+}
+
+// Retina image
+@mixin image-2x($image, $width, $height) {
+	@media (min--moz-device-pixel-ratio : 1.3),
+	(-o-min-device-pixel-ratio : 2.6/2),
+	(-webkit-min-device-pixel-ratio : 1.3),
+	(min-device-pixel-ratio : 1.3),
+	(min-resolution : 1.3dppx) {
+		/* on retina, use image that's scaled by 2 */
+		background-image : url($image);
+		background-size  : $width $height;
+	}
+}
+
+@mixin hide-text() {
+	color       : transparent;
+	font        : 0/0 a;
+	text-shadow : none;
+}

@@ -1,0 +1,315 @@
+// -----------------------------------------------
+//  Form config
+// -----------------------------------------------
+
+$input-background : #FFF;
+$input-border : 1px solid #BCBCBC;
+$input-padding : 10px 14px;
+$input-radius : 0px;
+// Padding small
+$input-padding-small : 8px 10px;
+// Padding big
+$input-padding-big : 15px 14px;
+$input-font-size : 14px;
+// Font size small
+$input-font-size-small : 13px;
+// Font size big
+$input-font-size-big : 14px;
+$input-color : #444;
+$input-transition : border .3s ease;
+
+// Placeholder
+$input-placeholder : #A7A7A7;
+
+// Focus
+$input-border-focus : #444;
+
+// Error
+$input-border-error : #F30;
+
+// Success
+$input-border-success : #3DB42C;
+
+// Disabled
+$input-border-disabled : #BCBCBC;
+$input-background-disabled : #F9F9F9;
+$input-color-disabled : #939393;
+
+// Select style
+$jq-select-dropdown-bg : #F7F7F7;
+$jq-select-dropdown-color : #444;
+$jq-select-dropdown-size : 14px;
+$jq-select-dropdown-size-big : 14px;
+$jq-select-dropdown-size-small : 13px;
+$jq-select-dropdown-bg-hover : #E81313;
+$jq-select-dropdown-color-hover : #FFF;
+$jq-select-dropdown-padding : 12px 14px;
+$jq-select-dropdown-padding-small : 8px 14px;
+$jq-select-dropdown-padding-big : 17px 14px;
+$jq-select-dropdown-border : 1px solid #E0E0E0;
+
+// Type-2
+$jq-select-dropdown-bg--type2 : #F7F7F7;
+$jq-select-dropdown-color---type2 : #444;
+$jq-select-dropdown-bg-hover---type2 : #E81313;
+$jq-select-dropdown-color-hover---type2 : #FFF;
+$jq-select-dropdown-border---type2 : #E0E0E0;
+
+// Multiselect
+$jq-multuselect-bg : #E81313;
+$jq-multuselect-color : #FFF;
+
+// Checkbox
+$jb-checkbox-bg : transparent;
+$jb-checkbox-border : #CDCDCD;
+$jb-checkbox-bg-hover : transparent;
+$jb-checkbox-border-hover : #CDCDCD;
+$jb-checkbox-bg-active : transparent;
+$jb-checkbox-border-active : #CDCDCD;
+$jb-checkbox-bg-error : transparent;
+$jb-checkbox-border-error : $input-border-error;
+$jb-checkbox-bg-success : transparent;
+$jb-checkbox-border-success : $input-border-success;
+
+// Radio
+$jb-radio-bg : transparent;
+$jb-radio-border : #BCBCBC;
+$jb-radio-bg-hover : transparent;
+$jb-radio-border-hover : #BCBCBC;
+$jb-radio-dot-hover : #444;
+$jb-radio-bg-active : transparent;
+$jb-radio-border-active : #BCBCBC;
+$jb-radio-dot-active : #E81313;
+$jb-radio-bg-error : transparent;
+$jb-radio-border-error : $input-border-error;
+$jb-radio-bg-success : transparent;
+$jb-radio-border-success : $input-border-success;
+
+// -----------------------------------------------
+//  Form style
+// -----------------------------------------------
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="password"],
+select,
+textarea {
+	background-color   : $input-background;
+	border             : $input-border;
+	border-radius      : $input-radius;
+	outline            : 0;
+	height             : auto;
+	padding            : $input-padding;
+	line-height        : 1.25;
+	color              : $input-color;
+	max-width          : 100%;
+	transition         : $input-transition;
+	font-size          : $input-font-size;
+	-webkit-appearance : none;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing    : border-box;
+	box-sizing         : border-box;
+	@include placeholder() {
+		color   : $input-placeholder;
+		opacity : 1;
+	}
+	&.focus,
+	&:focus {
+		border-color : $input-border-focus;
+	}
+	&.error {
+		background-image    : url('../images/error.svg');
+		background-repeat   : no-repeat;
+		background-position : 100% 50%;
+		border-color        : $input-border-error;
+		padding-right       : 30px;
+		.no-svg & {
+			background-image : url('../images/error.png');
+		}
+	}
+	&.success {
+		background-image    : url('../images/success.svg');
+		background-repeat   : no-repeat;
+		background-position : 100% 50%;
+		border-color        : $input-border-success;
+		padding-right       : 30px;
+		.no-svg & {
+			background-image : url('../images/success.png');
+		}
+	}
+	&.small {
+		font-size : $input-font-size-small;
+		padding   : $input-padding-small;
+	}
+	&.big {
+		font-size : $input-font-size-big;
+		padding   : $input-padding-big;
+	}
+	&.full-size {
+		width : 100%;
+	}
+	&.disabled,
+	&[disabled] {
+		cursor           : default;
+		background-color : $input-background-disabled;
+		border-color     : $input-border-disabled;
+		color            : $input-color-disabled;
+	}
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	display        : inline-block;
+	vertical-align : middle;
+}
+
+textarea {
+	height   : auto;
+	overflow : auto;
+	&.error {
+		background-position : 100% 13px;
+	}
+	&.success {
+		background-position : 100% 10px;
+	}
+}
+
+.b-form {
+	legend {
+		color       : $main;
+		font-size   : 18px;
+		font-weight : 700;
+		padding-top : 20px;
+		display     : block;
+	}
+	fieldset {
+		margin  : 0;
+		padding : 0;
+	}
+}
+
+// -----------------------------------------------
+//  Checkbox style
+// -----------------------------------------------
+
+.jq-checkbox {
+	vertical-align     : middle;
+	width              : 18px;
+	height             : 18px;
+	margin             : 0 5px 0 0;
+	border             : 1px solid $jb-checkbox-border;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing    : border-box;
+	box-sizing         : border-box;
+	background         : $jb-checkbox-bg;
+	cursor             : pointer;
+	transition         : border .3s ease;
+	top                : -1px;
+	&__div {
+		margin-top  : 1px;
+		margin-left : 0;
+	}
+	&.big {
+		width  : 22px;
+		height : 22px;
+		.jq-checkbox__div {
+			margin-top  : 3px;
+			margin-left : 2px;
+		}
+	}
+	&:hover {
+		border-color : $jb-checkbox-border-active;
+		background   : $jb-checkbox-bg-hover;
+		.jq-checkbox__div {
+		}
+	}
+	&.checked {
+		border-color : $jb-checkbox-border-active;
+		background   : $jb-checkbox-bg-active;
+		.jq-checkbox__div {
+		}
+	}
+	&.error {
+		border-color : $jb-checkbox-border-error;
+		background   : $jb-checkbox-bg-error;
+	}
+	&.success {
+		border-color : $jb-checkbox-border-success;
+		background   : $jb-checkbox-bg-success;
+	}
+	&.disabled {
+		opacity : .55;
+	}
+}
+
+.jq-radio {
+	vertical-align     : middle;
+	width              : 18px;
+	height             : 18px;
+	margin             : 0 5px 0 0;
+	border-radius      : 50%;
+	border             : 1px solid $jb-radio-border;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing    : border-box;
+	box-sizing         : border-box;
+	background         : $jb-radio-bg;
+	cursor             : pointer;
+	transition         : border .3s ease;
+	top                : -1px;
+	position           : relative;
+	&__div {
+		width         : 10px;
+		height        : 10px;
+		position      : absolute;
+		border-radius : 50%;
+		top           : 50%;
+		left          : 50%;
+		margin-top    : -5px;
+		margin-left   : -5px;
+		opacity       : 0;
+		transition    : opacity .3s ease;
+	}
+	&.big {
+		width  : 22px;
+		height : 22px;
+	}
+	&:hover {
+		border-color : $jb-radio-border-active;
+		background   : $jb-radio-bg-hover;
+		.jq-radio__div {
+			background : $jb-radio-dot-hover;
+			opacity    : 1;
+		}
+	}
+	&.checked {
+		border-color : $jb-radio-border-active;
+		background   : $jb-radio-bg-active;
+		.jq-radio__div {
+			background : $jb-radio-dot-active;
+			opacity    : 1;
+		}
+	}
+	&.error {
+		border-color : $jb-radio-border-error;
+		background   : $jb-radio-bg-error;
+	}
+	&.success {
+		border-color : $jb-checkbox-border-success;
+		background   : $jb-checkbox-bg-success;
+	}
+	&.disabled {
+		opacity : .55;
+	}
+}
+
+// -----------------------------------------------
+//  Select style import
+// -----------------------------------------------
+@import "select";
+
+// -----------------------------------------------
+//  Number style import
+// -----------------------------------------------
+@import "number";

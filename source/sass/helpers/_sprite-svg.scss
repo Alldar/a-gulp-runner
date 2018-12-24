@@ -1,0 +1,75 @@
+@mixin svg-checkbox() {
+	background: url('../images/sprite.svg') 98.76543209876543% 63.46153846153846% no-repeat;
+	width: 16px;
+	height: 13px;
+}
+@mixin svg-dark-checkbox() {
+	background: url('../images/sprite.svg') 98.76543209876543% 38.46153846153846% no-repeat;
+	width: 16px;
+	height: 13px;
+}
+@mixin svg-fb() {
+	background: url('../images/sprite.svg') 54.11764705882353% 0 no-repeat;
+	width: 12px;
+	height: 22px;
+}
+@mixin svg-google-plus() {
+	background: url('../images/sprite.svg') 76.3157894736842% 50% no-repeat;
+	width: 21px;
+	height: 21px;
+}
+@mixin svg-instagram() {
+	background: url('../images/sprite.svg') 77.33333333333333% 0 no-repeat;
+	width: 22px;
+	height: 22px;
+}
+@mixin svg-odnoklassniki() {
+	background: url('../images/sprite.svg') 0 47.61904761904762% no-repeat;
+	width: 15px;
+	height: 23px;
+}
+@mixin svg-select-dropdown() {
+	background: url('../images/sprite.svg') 94.88791365199857% 78.9293067947838% no-repeat;
+	width: 12.69px;
+	height: 6.72px;
+}
+@mixin svg-twitter() {
+	background: url('../images/sprite.svg') 0 0 no-repeat;
+	width: 23px;
+	height: 20px;
+}
+@mixin svg-vk() {
+	background: url('../images/sprite.svg') 68.75% 95.55555555555556% no-repeat;
+	width: 17px;
+	height: 20px;
+}
+@mixin svg-white-fb() {
+	background: url('../images/sprite.svg') 0 100% no-repeat;
+	width: 12px;
+	height: 22px;
+}
+@mixin svg-white-google-plus() {
+	background: url('../images/sprite.svg') 44.73684210526316% 97.72727272727273% no-repeat;
+	width: 21px;
+	height: 21px;
+}
+@mixin svg-white-instagram() {
+	background: url('../images/sprite.svg') 16% 100% no-repeat;
+	width: 22px;
+	height: 22px;
+}
+@mixin svg-white-odnoklassniki() {
+	background: url('../images/sprite.svg') 28.048780487804876% 47.61904761904762% no-repeat;
+	width: 15px;
+	height: 23px;
+}
+@mixin svg-white-twitter() {
+	background: url('../images/sprite.svg') 31.08108108108108% 0 no-repeat;
+	width: 23px;
+	height: 20px;
+}
+@mixin svg-white-vk() {
+	background: url('../images/sprite.svg') 100% 0 no-repeat;
+	width: 17px;
+	height: 20px;
+}

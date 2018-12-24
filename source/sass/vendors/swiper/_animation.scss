@@ -1,0 +1,34 @@
+.swiper-container-fade.swiper-container-free-mode .swiper-slide {
+	transition-timing-function : ease-out;
+}
+
+.swiper-container-fade .swiper-slide {
+	pointer-events      : none;
+	transition-property : opacity;
+}
+
+.swiper-container-fade .swiper-slide .swiper-slide {
+	pointer-events : none;
+}
+
+.swiper-container-fade .swiper-slide-active,
+.swiper-container-fade .swiper-slide-active .swiper-slide-active {
+	pointer-events : auto;
+}
+
+.swiper-zoom-container {
+	width           : 100%;
+	height          : 100%;
+	display         : flex;
+	justify-content : center;
+	align-items     : center;
+	text-align      : center;
+}
+
+.swiper-zoom-container > img,
+.swiper-zoom-container > svg,
+.swiper-zoom-container > canvas {
+	max-width  : 100%;
+	max-height : 100%;
+	object-fit : contain;
+}

@@ -1,0 +1,154 @@
+// -----------------------------------------------
+//  Form config
+// -----------------------------------------------
+// Error
+$form-label-color : #444;
+$form-label-size : 14px;
+$form-label-weight : 400;
+$form-label-margin : 0 0 10px;
+$form-error-color : #F30;
+$form-error-size : 12px;
+$form-error-weight : 400;
+
+// Error Type-2
+$form-error-type-2-bg : #F30;
+$form-error-type-2-radius : 1px;
+$form-error-type-2-color : #FFF;
+$form-error-type-2-size : 12px;
+$form-error-type-2-weight : 400;
+$form-error-type-2-padding : 3px 7px;
+$form-error-type-2-marrgin : -5px 15px 5px;
+
+// Hint
+$form-hint-color : #444;
+$form-hint-size : 12px;
+$form-hint-weight : 400;
+$form-hint-style : italic;
+$form-hint-margin : 5px 0 0;
+
+// Grid
+$form-grid : 7px;
+
+// -----------------------------------------------
+//  Form style
+// -----------------------------------------------
+.b-form {
+	position : relative;
+	.b-grid {
+		margin : -$form-grid;
+	}
+	.b-grid__item {
+		padding : $form-grid;
+	}
+}
+
+.b-form__row {
+	margin-top : 15px;
+	position   : relative;
+	&:first-child {
+		margin-top : 0;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="password"],
+	textarea {
+		width : 100%;
+	}
+	label {
+		display     : block;
+		cursor      : pointer;
+		color       : $form-label-color;
+		font-size   : $form-label-size;
+		margin      : $form-label-margin;
+		font-weight : $form-label-weight;
+	}
+}
+
+.b-form__input {
+	position : relative;
+	z-index  : 1;
+}
+
+.b-form__hint {
+	position    : relative;
+	z-index     : 2;
+	color       : $form-hint-color;
+	font-size   : $form-hint-size;
+	font-weight : $form-hint-weight;
+	font-style  : $form-hint-style;
+	margin      : $form-hint-margin;
+}
+
+.b-form__error {
+	margin-top  : 5px;
+	color       : $form-error-color;
+	font-size   : $form-error-size;
+	font-weight : $form-error-weight;
+	z-index     : 3;
+	position    : relative;
+	&.type-2 {
+		display        : inline-block;
+		vertical-align : top;
+		background     : $form-error-type-2-bg;
+		border-radius  : $form-error-type-2-radius;
+		color          : $form-error-type-2-color;
+		font-size      : $form-error-type-2-size;
+		font-weight    : $form-error-type-2-weight;
+		padding        : $form-error-type-2-padding;
+		margin         : $form-error-type-2-marrgin;
+		&:after {
+			content      : '';
+			position     : absolute;
+			left         : 15px;
+			top          : -4px;
+			width        : 0;
+			height       : 0;
+			border-style : solid;
+			border-width : 0 5px 4px 5px;
+			border-color : transparent transparent $form-error-type-2-bg transparent;
+		}
+	}
+}
+
+$float-label-size : 14px;
+$float-label-color : #A7A7A7;
+$float-label-left : 14px;
+$float-input-padding : 15px 14px;
+
+// Float Label
+.b-form__float-label {
+	position : relative;
+	label {
+		position    : absolute;
+		top         : 50%;
+		color       : $float-label-color;
+		font-size   : $float-label-size;
+		left        : $float-label-left;
+		margin      : 0;
+		z-index     : 2;
+		transform   : translateY(-50%);
+		transition  : top .3s ease, transform .3s ease, font-size .3s ease;
+		will-change : transform, font-size, top;
+		.no-transform & {
+			margin-top : -7px;
+		}
+	}
+	&.is-textarea label {
+		top : 21px;
+	}
+	&.focused label,
+	&.is-textarea.focused label {
+		top       : 3px;
+		font-size : 11px;
+		transform : translateY(0%);
+	}
+	input,
+	textarea {
+		position : relative;
+		z-index  : 1;
+		padding  : $float-input-padding;
+	}
+}

@@ -1,0 +1,47 @@
+.b-alert {
+	font-weight    : 400;
+	font-size      : 14px;
+	background     : #FCF8E3;
+	padding        : 13px 20px;
+	text-transform : none;
+	margin-bottom  : 25px;
+	.b-block & {
+		margin  : 0 -40px 35px;
+		padding : 13px 40px;
+	}
+	h4 {
+		color  : #C09853;
+		margin : 0 0 .5em;
+	}
+	&.success {
+		background : #DFF0D8;
+		color      : #468847;
+		a {
+			color : #468847;
+		}
+		h4 {
+			color : #468847;
+		}
+	}
+	&.danger,
+	&.error {
+		background : #F9ECEC;
+		color      : #D94845;
+		a {
+			color : #D94845;
+		}
+		h4 {
+			color : #D94845;
+		}
+	}
+	&.info {
+		background-color : #D9EDF7;
+		color            : #3A87AD;
+		a {
+			color : #3A87AD;
+		}
+		h4 {
+			color : #3A87AD;
+		}
+	}
+}

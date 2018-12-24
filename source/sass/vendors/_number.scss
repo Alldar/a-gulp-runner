@@ -1,0 +1,95 @@
+.jq-number {
+	position       : relative;
+	display        : inline-block;
+	vertical-align : middle;
+	padding        : 0 40px 0 0;
+	&__field {
+		width      : 40px;
+		border     : 1px solid #D6D6D6;
+		text-align : center;
+		input {
+			background-color : $input-background;
+			border           : $input-border;
+			outline          : 0;
+			color            : $input-color;
+			max-width        : 100%;
+			transition       : $input-transition;
+			font-size        : $input-font-size;
+			box-sizing       : border-box;
+			width            : 100%;
+			padding          : 0 5px;
+			height           : 40px;
+			text-align       : center;
+			line-height      : 38px;
+			border           : none;
+			outline          : none;
+			-moz-appearance  : textfield;
+			&::-webkit-inner-spin-button,
+			&::-webkit-outer-spin-button {
+				margin             : 0; // в каких-то браузерах присутствует отступ
+				-webkit-appearance : none;
+			}
+		}
+	}
+	&.focused .jq-number__field {
+		border-color : $input-border-focus;
+	}
+	&.error .jq-number__field {
+		border-color : $input-border-error;
+	}
+	&.success .jq-number__field {
+		border-color : $input-border-success;
+	}
+	&__spin {
+		position            : absolute;
+		top                 : 0;
+		right               : 0;
+		-webkit-box-sizing  : border-box;
+		-moz-box-sizing     : border-box;
+		box-sizing          : border-box;
+		width               : 40px;
+		height              : 21px;
+		background-color    : #F5F5F5;
+		border              : 1px solid #D6D6D6;
+		border-left         : 0;
+		border-radius       : 0 1px 1px 0;
+		-webkit-user-select : none;
+		-moz-user-select    : none;
+		-ms-user-select     : none;
+		user-select         : none;
+		cursor              : pointer;
+		text-align          : center;
+		color               : #2F2F2F;
+		font-size           : 13px;
+		&:hover {
+			background : $red;
+			color      : #FFF;
+		}
+		&.plus {
+			margin-bottom : -1px;
+			border-bottom : 0;
+			line-height   : 21px;
+			&:before {
+				content : '+';
+			}
+		}
+		&.minus {
+			top        : auto;
+			bottom     : 0;
+			margin-top : -1px;
+			&:before {
+				content : '-';
+			}
+		}
+	}
+	&.disabled .jq-number__field,
+	&.disabled .jq-number__spin {
+		border-color : #CCC;
+		background   : #F5F5F5;
+		box-shadow   : none;
+		color        : #888;
+		&:after {
+			border-bottom-color : #AAA;
+		}
+	}
+}
