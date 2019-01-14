@@ -28,14 +28,15 @@ var browserSync  = require('browser-sync');
 // Это баннер который добавляется вверх файла финальным js .min т.к. углификации убирает комменты сюда можно добавить необходимый копирайт
 var banner = [
 	'/**',
-	' <%= pkg.name %>' +
-	' @author <%= pkg.maintainers.name %>' +
-	' @version v<%= pkg.version %>' +
-	' External lib: ' +
+	'<%= pkg.name %> \n'+
+	'@author: <%= pkg.maintainers[0].name %>, ' +
+	'@website: <%= pkg.maintainers[0].web %>, ' +
+	'@version: v<%= pkg.version %> \n' +
+	'External lib: ' +
 	' **/'
 ].join('\n');
 
-function scripts() {
+function scripts(done) {
 	return (
 			gulp
 				.src([

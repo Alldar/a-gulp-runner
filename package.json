@@ -16,10 +16,9 @@
 		}
 	],
 	"dependencies": {
-		"browser-sync": "^2.26.3",
 		"gulp": "^4.0.0",
 		"gulp-autoprefixer": "^6.0.0",
-		"gulp-cache": "^1.0.2",
+		"gulp-cache": "^1.1.0",
 		"gulp-changed": "^3.2.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-file-include": "^2.0.1",
@@ -40,5 +39,8 @@
 		"require-dir": "^1.2.0",
 		"undertaker-forward-reference": "^1.0.2",
 		"vinyl-buffer": "^1.0.1"
+	},
+	"devDependencies": {
+		"browser-sync": "^2.26.3"
 	}
 }
